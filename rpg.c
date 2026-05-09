@@ -112,6 +112,10 @@ int main(int argc,char** argv){
     mp = 100;
     enm = 500;
 
+    // FB:
+    // && > ||で優先だと思うんですが、
+    // while ((player1 > 0 || ...) && env > 0) {}
+    // の方が可読性の面でも良いと思います
     while(player1 > 0 || player2 > 0 || player3 > 0 && enm > 0){
 
         //体力等がマイナス表示にならないようにしています
@@ -255,7 +259,8 @@ int main(int argc,char** argv){
                 if(enm <= 0){
                     break;
                 }
-        }}else if(player3 <= 0){       //体力がない場合
+        }
+        }else if(player3 <= 0){       //体力がない場合
         // NOTE: このif文では既にmp<30 or mp>=30で完全に網羅できているので
         // このブロックが実行されることは絶対に無いです.
         // 所謂"デッドコード"なので処理を変えるか、消しましょう.
