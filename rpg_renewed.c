@@ -5,17 +5,21 @@
 //ifが続きすぎるとよくないと知る前に書いたためすごく汚いプログラミングになっています
 //すみません
 
+// Prototype declaration
 int attack1();
 int attack2();
 int magic();
 int tairyoku(int);
 
 int main(int argc,char** argv){
+    // 変数が多すぎる
     int enm,player1,player2,n,player3,mp,damage,action1,action2,action3,nerai1,nerai2,nerai3,nerai4;
+
     player1 = 100;
     player3 = player2 = 80;
     mp = 100;
     enm = 500;
+
     while(player1 > 0 || player2 > 0 || player3 > 0 && enm > 0){
         //体力等がマイナス表示にならないようにしています
         player1 = tairyoku(player1);
